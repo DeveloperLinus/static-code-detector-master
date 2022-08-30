@@ -4,47 +4,47 @@ import android.util.Log
 
 class LargeClassTest {
     fun test01() {
-        print()
+//        print()
     }
 
     fun test02() {
-        print()
+//        print()
     }
 
     fun test03() {
-        print()
+//        print()
     }
 
     fun test04() {
-        print()
+//        print()
     }
 
     fun test05() {
-        print()
+//        print()
     }
 
     fun test06() {
-        print()
+//        print()
     }
 
     fun test07() {
-        print()
+//        print()
     }
 
     fun test08() {
-        print()
+//        print()
     }
 
     fun test09() {
-        print()
+//        print()
     }
 
     fun test10() {
-        print()
+//        print()
     }
 
     fun test11() {
-        print()
+//        print()
     }
 
     private fun print() {
