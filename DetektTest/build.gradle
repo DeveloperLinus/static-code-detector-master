@@ -15,10 +15,10 @@ buildscript {
         // in the individual module build.gradle files
     }
 }
-
-plugins {
-    id("io.gitlab.arturbosch.detekt").version("1.10.0")
-}
+//
+//plugins {
+//    id("io.gitlab.arturbosch.detekt").version("1.10.0")
+//}
 
 allprojects {
     repositories {
@@ -27,7 +27,7 @@ allprojects {
         google()
     }
 //    // 为所有项目应用 detekt，detekt 将自动识别 kt 代码做检查
-//    apply plugin: 'io.gitlab.arturbosch.detekt'
+    apply plugin: 'io.gitlab.arturbosch.detekt'
 }
 
 task clean(type: Delete) {

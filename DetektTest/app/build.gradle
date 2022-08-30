@@ -47,7 +47,7 @@ detekt {
     reports {	// 指定输出的报告文件类型
         html {
             enabled = true                        // Enable/Disable HTML report (default: true)
-            destination = file("build/reports/detekt.html") // Path where HTML report will be stored (default:
+            destination = file("build/reports/detekt/detekt.html") // Path where HTML report will be stored (default:
         }
     }
 }
