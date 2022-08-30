@@ -42,14 +42,14 @@ detekt {
     input = files("src/main/java", "src/main/kotlin") // 指定需要扫描的源代码文件路径
     def baseDir = rootProject.projectDir
     config = files("$baseDir/config/detekt/detekt.yml") // 指定采用的规则集文件
-    buildUponDefaultConfig = true
-    debug = true
-//    reports {	// 指定输出的报告文件类型
-//        html {
-//            enabled = true                        // Enable/Disable HTML report (default: true)
-//            destination = file("build/reports/detekt.html") // Path where HTML report will be stored (default:
-//        }
-//    }
+//    buildUponDefaultConfig = true
+//    debug = true
+    reports {	// 指定输出的报告文件类型
+        html {
+            enabled = true                        // Enable/Disable HTML report (default: true)
+            destination = file("build/reports/detekt.html") // Path where HTML report will be stored (default:
+        }
+    }
 }
 
 dependencies {
