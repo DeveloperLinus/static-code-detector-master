@@ -39,6 +39,21 @@ class LargeClassTest {
         print()
     }
 
+    fun test10() {
+        print()
+    }
+
+    fun test11() {
+        print()
+    }
+
+    fun test12() {
+        print()
+    }
+
+    fun test13() {
+    }
+
     private fun print() {
         Log.d("Detekt", "test detekt")
     }
