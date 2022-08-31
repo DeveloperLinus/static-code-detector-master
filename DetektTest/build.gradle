@@ -5,6 +5,7 @@ buildscript {
     repositories {
         maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
         jcenter { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter' }
+//        gradlePluginPortal()
         google()
     }
     dependencies {
@@ -15,10 +16,7 @@ buildscript {
         // in the individual module build.gradle files
     }
 }
-//
-//plugins {
-//    id("io.gitlab.arturbosch.detekt").version("1.10.0")
-//}
+
 
 allprojects {
     repositories {
@@ -26,9 +24,10 @@ allprojects {
         jcenter { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter' }
         google()
     }
-//    // 为所有项目应用 detekt，detekt 将自动识别 kt 代码做检查
+    // 为所有项目应用 detekt，detekt 将自动识别 kt 代码做检查
     apply plugin: 'io.gitlab.arturbosch.detekt'
 }
+apply from: 'config/detekt.gradle'
 
 task clean(type: Delete) {
     delete rootProject.buildDir

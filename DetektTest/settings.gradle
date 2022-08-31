@@ -1,2 +1,4 @@
+include ':alibabaJavaCodingGuidelinesTest'
+include ':detektTestLib'
 rootProject.name='DetektTest'
 include ':app'

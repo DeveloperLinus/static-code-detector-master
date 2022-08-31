@@ -35,24 +35,8 @@ android {
     }
 }
 
-apply plugin: 'io.gitlab.arturbosch.detekt'
-tasks.detekt.jvmTarget = "1.8"
-detekt {
-    toolVersion = "1.10.0"
-    input = files("src/main/java", "src/main/kotlin") // 指定需要扫描的源代码文件路径
-    def baseDir = rootProject.projectDir
-    config = files("$baseDir/config/detekt/detekt.yml") // 指定采用的规则集文件
-//    buildUponDefaultConfig = true
-//    debug = true
-    reports {	// 指定输出的报告文件类型
-        html {
-            enabled = true                        // Enable/Disable HTML report (default: true)
-            destination = file("build/reports/detekt/detekt.html") // Path where HTML report will be stored (default:
-        }
-    }
-}
-
 dependencies {
+    detektPlugins "io.gitlab.arturbosch.detekt:detekt-formatting:1.10.0"
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.1.0'
@@ -64,5 +48,4 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-//    detektPlugins "io.gitlab.arturbosch.detekt:detekt-formatting:1.10.0"
 }
