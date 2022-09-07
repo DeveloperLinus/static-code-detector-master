@@ -25,9 +25,18 @@ allprojects {
         google()
     }
     // 为所有项目应用 detekt，detekt 将自动识别 kt 代码做检查
-    apply plugin: 'io.gitlab.arturbosch.detekt'
+//    apply plugin: 'io.gitlab.arturbosch.detekt'
 }
-apply from: 'config/detekt.gradle'
+
+// 在这里为每个模块引入 Detekt 扫描
+subprojects {
+    apply plugin: "io.gitlab.arturbosch.detekt"
+    dependencies {
+        detektPlugins "io.gitlab.arturbosch.detekt:detekt-formatting:1.10.0"
+    }
+    apply from: '../config/detekt.gradle'
+}
+//apply from: 'config/detekt.gradle'
 
 task clean(type: Delete) {
     delete rootProject.buildDir

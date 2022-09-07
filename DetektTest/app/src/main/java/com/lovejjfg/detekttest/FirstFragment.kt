@@ -14,7 +14,8 @@ import androidx.navigation.fragment.findNavController
 class FirstFragment : Fragment() {
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         foo("xxx")
@@ -37,21 +38,10 @@ class FirstFragment : Fragment() {
         // UnnecessarySafeCall
     }
 
-
-
-
-
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         view!!.findViewById<Button>(R.id.button_first).setOnClickListener {
             findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
         }
     }
-
-
-
-
-
-
 }
