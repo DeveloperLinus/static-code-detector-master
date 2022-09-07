@@ -1,12 +1,11 @@
 @file:Suppress("TooManyFunctions", "EmptyFunctionBlock")
+
 package com.itlong.detect.code.plugin.detekttestlib
 
 import android.util.Log
 
 class LargeClassTest {
-    @Suppress("EmptyFunctionBlock")
-    fun test01() {
-    }
+    fun test01() {print()}
 
     fun test02() {
     }

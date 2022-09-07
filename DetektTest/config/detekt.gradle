@@ -5,7 +5,7 @@ detekt {
             "src/test/kotlin", "src/test/java",
             "src/androidTest/kotlin", "src/androidTest/java"
     )
-    autoCorrect = true // 自动格式化代码的总开关
+//    autoCorrect = true // 自动格式化代码的总开关
     config = rootProject.files("config/detekt/detekt.yml")
     baseline = rootProject.file("config/detekt/detekt-baseline.xml")
     parallel = true
