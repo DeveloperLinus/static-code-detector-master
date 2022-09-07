@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues>
+    <ID>TooGenericExceptionCaught:LockTest.kt$LockA$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:LockTest.kt$LockB$e: Exception</ID>
+    <ID>NoWildcardImports:com.lovejjfg.detekttest.error.LockTest.kt:4</ID>
+    <ID>NoWildcardImports:com.lovejjfg.detekttest.lsn03.CommonLeakageCaseActivity.kt:10</ID>
+    <ID>NoWildcardImports:com.lovejjfg.detekttest.ExampleUnitTest.kt:5</ID>
+    <ID>NoWildcardImports:com.lovejjfg.detekttest.ExampleInstrumentedTest.kt:9</ID>
+    <ID>MagicNumber:AnrActivity.kt$AnrActivity$100000</ID>
+    <ID>MagicNumber:LockTest.kt$LockA$3000</ID>
+    <ID>MagicNumber:LockTest.kt$LockA$60</ID>
+    <ID>MagicNumber:LockTest.kt$LockA$1000</ID>
+    <ID>MagicNumber:LockTest.kt$LockB$3000</ID>
+    <ID>MagicNumber:LockTest.kt$LockB$60</ID>
+    <ID>MagicNumber:LockTest.kt$LockB$1000</ID>
+    <ID>MagicNumber:CommonLeakageCaseActivity.kt$CommonLeakageCaseActivity$10</ID>
+    <ID>MagicNumber:CommonLeakageCaseActivity.kt$CommonLeakageCaseActivity$1000</ID>
+    <ID>MagicNumber:CommonLeakageCaseActivity.kt$CommonLeakageCaseActivity$20000</ID>
+  </ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>NoWildcardImports:com.itlong.detect.code.plugin.detekttestlib.ExampleInstrumentedTest.kt:9</ID>
+    <ID>NoWildcardImports:com.itlong.detect.code.plugin.detekttestlib.ExampleUnitTest.kt:5</ID>
+  </CurrentIssues>
+</SmellBaseline>

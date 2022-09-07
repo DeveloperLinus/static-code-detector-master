@@ -1,0 +1,40 @@
+detekt {
+    toolVersion = "1.10.0"                              // Version of Detekt that will be used. When unspecified the latest detekt version found will be used. Override to stay on the same version.
+    input = files(
+            "src/main/kotlin", "src/main/java",
+            "src/test/kotlin", "src/test/java",
+            "src/androidTest/kotlin", "src/androidTest/java"
+    )
+    autoCorrect = true // 自动格式化代码的总开关
+    config = rootProject.files("config/detekt/detekt.yml")
+    baseline = rootProject.file("config/detekt/detekt-baseline.xml")
+    parallel = true
+    reports { // 指定输出的报告文件类型
+	    html {
+            enabled = true                        // Enable/Disable HTML report (default: true)
+            destination = file("build/reports/detekt/detekt.html") // Path where HTML report will be stored (default:
+        }
+        xml.enabled = false
+        txt {
+            enabled = true
+            destination = file("build/reports/detekt/detekt.txt")
+        }
+//        sarif.enabled = false
+    }
+}
+tasks.detekt.jvmTarget = "1.8"
+
+// THIS LOCATION FAILED ON: Caused by: groovy.lang.MissingPropertyException: Could not get unknown property 'io' for root project 'My Application' of type org.gradle.api.Project.
+//task detektProjectBaseline(type: io.gitlab.arturbosch.detekt.DetektCreateBaselineTask) {
+//    description = "Overrides current baseline."
+//    ignoreFailures.set(true)
+//    parallel.set(true)
+//    buildUponDefaultConfig.set(true)
+//    setSource(files(rootDir))
+//    config.setFrom(files("$rootDir/config/detekt/detekt.yml"))
+//    baseline.set(file("$rootDir/config/detekt/detekt-baseline.xml"))
+//    include("**/*.kt")
+//    include("**/*.kts")
+//    exclude("**/resources/**")
+//    exclude("**/build/**")
+//}
